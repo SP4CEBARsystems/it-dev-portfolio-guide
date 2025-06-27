@@ -122,28 +122,30 @@ git checkout -b crud empty-laravel
 ```bash
 git checkout -b devops-1 crud
 ```
-2. write a Docker compose file
-3. run the commands
-
-```bash
-docker network create laravel-net
-```
-
-```bash
-docker run -d --name mysql --network laravel-net -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=laravel -e MYSQL_USER=laravel -e MYSQL_PASSWORD=secret mysql:8.0
-```
-
-optional in case you are rate-limited
-```bash
-docker pull php:8.2-apache
-docker pull composer:2.7
-```
-
-app
-```bash
-docker build -t laravel-app ./src
-docker run -it --rm --network laravel-net -v "$PWD/src":/var/www/html -p 80:80 laravel-app
-```
+2. write a Docker compose file or copy [this](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/blob/crud-docker/Dockerfile) (avoid using or showing a `docker-compose.yml` file in this exercise)
+3. run these commands
+   1. create a channel for containers to communicate with each other
+   ```bash
+   docker network create laravel-net
+   ```
+   2. run the database container, this downloads an image and does not need any of your files to work
+   ```bash
+   docker run -d --name mysql --network laravel-net -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=laravel -e MYSQL_USER=laravel -e MYSQL_PASSWORD=secret mysql:8.0
+   ```
+   3. pull two images (you may need others) this is done manually in case Docker blocks the automatic pulling during your build
+   ```bash
+   docker pull php:8.2-apache
+   docker pull composer:2.7
+   ```
+   4. build your app
+   ```bash
+   docker build -t laravel-app ./src
+   ```
+   5. run your app
+   ```bash
+   docker run -it --rm --network laravel-net -v "$PWD/src":/var/www/html -p 80:80 laravel-app
+   ```
+   6. test your app at [localhost](http://localhost)
 
 ## Devops 2
 *Recommended branch: [crud-docker](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud-docker)*  
