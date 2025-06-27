@@ -67,7 +67,7 @@ npm install && npm run build
 ```
 4. Run Migrations
 ```bash
-php artisan migrate fresh --seed
+php artisan migrate:fresh --seed
 ```
 5. commit
 ```bash
