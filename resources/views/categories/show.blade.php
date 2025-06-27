@@ -1,4 +1,4 @@
-<x-main>
+<x-app-layout>
     <h2>Category</h2>
     <a href="./">Return to categories</a>
     <div style="padding: 20px; background-color: {{ $category->is_active ? 'black' : '#444' }}">
@@ -13,4 +13,4 @@
             </button>
         </a>
     </div>
-</x-main>
+</x-app-layout>

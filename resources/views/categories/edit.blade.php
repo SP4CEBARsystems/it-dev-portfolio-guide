@@ -1,4 +1,4 @@
-<x-main>
+<x-app-layout>
     <h2>Edit</h2>
     <a href="./">Return to category</a>
     @foreach ($errors->all() as $message)
@@ -42,4 +42,4 @@
         @method('DELETE')
         <input type="submit" value="Delete2" id="submit_delete" style="display: none">
     </form>
-</x-main>
+</x-app-layout>

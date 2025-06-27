@@ -1,4 +1,4 @@
-<x-main>
+<x-app-layout>
     <h2>Categories</h2>
     <a href="./categories/create">Create new</a>
     <p>
@@ -24,4 +24,4 @@
             </li>
         @endforeach
     </ul>
-</x-main>
+</x-app-layout>

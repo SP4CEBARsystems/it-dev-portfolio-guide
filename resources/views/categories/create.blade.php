@@ -1,4 +1,4 @@
-<x-main>
+<x-app-layout>
     <h2>Create</h2>
     <a href="./">Return to categories</a>
     @foreach ($errors->all() as $message)
@@ -35,4 +35,4 @@
         <br>
         <input type="submit" value="Submit">
     </form>
-</x-main>
+</x-app-layout>
