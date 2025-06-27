@@ -108,16 +108,56 @@ Plak de code hieronder in `app\Http\Controllers\Auth\RegisteredUserController.ph
 git add .&&git commit -m "improved breeze security"
 ```
 
-## Devops voorbereiding
+## Devops preparation
 1. create and checkout branch `crud` with code from `empty-laravel`
 ```bash
 git checkout -b crud empty-laravel
 ```
-2. kopieer crud code [hier vandaan](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud) en zet het in een model, resource controller, migration, (optioneel seeder en factory) en vier views
+2. copy crud code [from here](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud) and put it in a model, resource controller, migration, (optionally seeder and factory) and four views
 
+
+## Devops 1
+*Recommended branch: [crud-docker](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud-docker)*  
+1. create and checkout branch `devops-1` with code from `crud`
+```bash
+git checkout -b devops-1 crud
+```
+2. write a Docker compose file
+3. run the commands
+
+```bash
+docker network create laravel-net
+```
+
+```bash
+docker run -d --name mysql --network laravel-net -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=laravel -e MYSQL_USER=laravel -e MYSQL_PASSWORD=secret mysql:8.0
+```
+
+optional in case you are rate-limited
+```bash
+docker pull php:8.2-apache
+docker pull composer:2.7
+```
+
+app
+```bash
+docker build -t laravel-app ./src
+docker run -it --rm --network laravel-net -v "$PWD/src":/var/www/html -p 80:80 laravel-app
+```
+
+## Devops 2
+*Recommended branch: [crud-docker](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud-docker)*  
+1. create and checkout branch `devops-2` with code from `devops-1`
+```bash
+git checkout -b devops-2 devops-1
+```
+2. run
+```bash
+docker compose up
+```
+3. Document what happens in the command line and on Docker Desktop
 
 ## Devops 3
-(yes, we start with 3)  
 *Recommended branch: [breeze-login-crud](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login-crud)*  
 1. create and checkout branch `devops-3` with code from `security-1`
 ```bash
@@ -146,18 +186,6 @@ git remote add origin https://github.com/username/repo.git
 push
 ```
 8. follow [my guide to deploy laravel on render.com](<https://github.com/SP4CEBARsystems/Deploy-Laravel-on-Render>), make sure to deploy from branch `devops-3` when setting up your web app
-
-
-## devops 1 en 2
-*Recommended branch: [crud-docker](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud-docker)*  
-1. create and checkout branch `devops-1` with code from `crud`
-```bash
-git checkout -b devops-1 crud
-```
-2. create and checkout branch `devops-2` with code from `devops-1`
-```bash
-git checkout -b devops-2 devops-1
-```
 
 ## Usability 1
 *Recommended branch: [empty-laravel](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/empty-laravel)*  
