@@ -59,7 +59,7 @@ composer require laravel/breeze --dev
 2. Install Breeze Scaffolding
 This installs it, without any interactive prompts, for `blade` with dark mode support and phpunit testing (if we were to need that somehow)
 ```bash
-php artisan breeze:install blade --dark --testing=phpunit
+php artisan breeze:install blade --dark
 ```
 3. Install NPM Dependencies and Compile Assets
 ```bash
@@ -67,7 +67,7 @@ npm install && npm run build
 ```
 4. Run Migrations
 ```bash
-php artisan migrate fresh --seed
+php artisan migrate:fresh --seed
 ```
 5. commit
 ```bash
@@ -111,7 +111,7 @@ git add .&&git commit -m "improved breeze security"
 ```bash
 git checkout -b crud empty-laravel
 ```
-2. kopieer crud code ergens vandaan en zet het in een model, resource controller, migration, (optioneel seeder en factory) en vier views
+2. kopieer crud code [hier vandaan](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud) en zet het in een model, resource controller, migration, (optioneel seeder en factory) en vier views
 
 
 ## Devops 3
