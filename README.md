@@ -111,7 +111,7 @@ git add .&&git commit -m "improved breeze security"
 ```bash
 git checkout -b crud empty-laravel
 ```
-2. kopieer crud code ergens vandaan en zet het in een model, resource controller, migration, (optioneel seeder en factory) en vier views
+2. kopieer crud code [hier vandaan](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud) en zet het in een model, resource controller, migration, (optioneel seeder en factory) en vier views
 
 
 ## Devops 3
