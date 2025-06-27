@@ -149,7 +149,7 @@ push
 
 
 ## devops 1 en 2
-**Recommended branches: [breeze-login](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login), [docker](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/docker)**  
+**Recommended branch: [crud-docker](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud-docker)**  
 1. create and checkout branch `devops-1` with code from `crud`
 ```bash
 git checkout -b devops-1 crud
