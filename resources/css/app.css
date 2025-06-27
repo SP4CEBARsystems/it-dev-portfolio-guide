@@ -1,11 +1,64 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+/* ✅ Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+/* ✅ Font Awesome */
+@import url('../../node_modules/@fortawesome/fontawesome-free/css/all.css');
+
+/* ✅ CSS variables for your custom theme */
+:root {
+  --purple: #8a4d76;
+  --pink: #fa7c91;
+  --brown: #757763;
+  --beige-light: #d0d1cd;
+  --beige-lighter: #eff0eb;
+
+  --grey-dark: var(--brown);
+  --grey-light: var(--beige-light);
+  --primary: #1E4785;
+
+  --font-family-primary: 'Roboto', sans-serif;
 }
+
+/* ✅ Basic reset & base styles */
+body {
+  margin: 0;
+  font-family: var(--font-family-primary);
+  color: var(--grey-dark);
+  background-color: var(--beige-lighter);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-family-primary);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--grey-dark);
+}
+
+/* ✅ Example utility classes */
+.text-purple { color: var(--purple); }
+.text-pink { color: var(--pink); }
+.bg-beige-light { background-color: var(--beige-light); }
+.bg-primary { background-color: var(--primary); }
