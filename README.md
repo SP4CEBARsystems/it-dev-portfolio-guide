@@ -48,7 +48,7 @@ git branch "empty-laravel"
 ```
 
 ## 2 Security 1
-**Recommended branch: [breeze-login](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login)**  
+*Recommended branch: [breeze-login](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login)*  
 create and checkout branch `security-1` with code from `empty-laravel`
 ```bash
 git checkout -b security-1 empty-laravel
@@ -78,8 +78,8 @@ You now have a Laravel project with **authentication** (login, register, forgot 
 Visit `http://localhost/register` or `http://localhost/login` to see the auth pages in action.
 
 ## security 2
-*recording a 5-minute-video can take a while, you may skip this if you want*
-**Recommended branch: [breeze-login](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login)**
+*recording a 5-minute-video can take a while, you may skip this if you want*  
+*Recommended branch: [breeze-login](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login)*
 1.
 create and checkout branch `security-2` with code from `security-1`
 ```bash
@@ -117,8 +117,8 @@ git checkout -b crud empty-laravel
 
 
 ## Devops 3
-(yes, we start with 3)
-**Recommended branch: [breeze-login-crud](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login-crud)**  
+(yes, we start with 3)  
+*Recommended branch: [breeze-login-crud](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login-crud)*  
 1. create and checkout branch `devops-3` with code from `security-1`
 ```bash
 git checkout -b devops-3 security-1
@@ -149,7 +149,7 @@ push
 
 
 ## devops 1 en 2
-**Recommended branch: [crud-docker](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud-docker)**  
+*Recommended branch: [crud-docker](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/crud-docker)*  
 1. create and checkout branch `devops-1` with code from `crud`
 ```bash
 git checkout -b devops-1 crud
@@ -160,7 +160,7 @@ git checkout -b devops-2 devops-1
 ```
 
 ## Usability 1
-**Recommended branch: [empty-laravel](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/empty-laravel)**  
+*Recommended branch: [empty-laravel](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/empty-laravel)*  
 1. create and checkout branch `usability-1` with code from `empty-laravel`
 ```bash
 git checkout -b usability-1 empty-laravel
