@@ -59,7 +59,7 @@ composer require laravel/breeze --dev
 2. Install Breeze Scaffolding
 This installs it, without any interactive prompts, for `blade` with dark mode support and phpunit testing (if we were to need that somehow)
 ```bash
-php artisan breeze:install blade --dark --testing=phpunit
+php artisan breeze:install blade --dark
 ```
 3. Install NPM Dependencies and Compile Assets
 ```bash
