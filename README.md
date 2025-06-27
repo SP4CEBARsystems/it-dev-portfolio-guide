@@ -47,7 +47,7 @@ git commit -m "initial: empty laravel project"
 git branch "empty-laravel"
 ```
 
-## 2 Security 1
+## Security 1
 *Recommended branch: [breeze-login](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login)*  
 create and checkout branch `security-1` with code from `empty-laravel`
 ```bash
@@ -79,7 +79,7 @@ Visit `http://localhost/register` or `http://localhost/login` to see the auth pa
 
 ## security 2
 *recording a 5-minute-video can take a while, you may skip this if you want*  
-*Recommended branch: [breeze-login](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login)*
+*Recommended branch: [breeze-login](https://github.com/SP4CEBARsystems/it-dev-portfolio-guide/tree/breeze-login)*  
 1.
 create and checkout branch `security-2` with code from `security-1`
 ```bash
