@@ -1,15 +1,13 @@
 # Todo devops
-(carefully modified chatgpt)
 ## Preparation
 1. open a terminal in a folder you want to code in
 2. Create a New Laravel Project
 ```bash
-composer create-project laravel/laravel my-app
+composer create-project laravel/laravel it-dev-portfolio
 ```
-> Replace `my-app` with your desired project folder name.
 2. Change Directory
 ```bash
-cd my-app
+cd it-dev-portfolio
 ```
 3. Install Dependencies by running:
 ```bash
